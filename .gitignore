@@ -1,0 +1,6 @@
+.idea/
+target/
+saved_model/
+*.iml
+.DS_Store
+Thumbs.db
