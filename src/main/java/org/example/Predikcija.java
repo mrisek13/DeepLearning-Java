@@ -23,7 +23,7 @@ public class Predikcija {
 
                 // Pokretanje predikcije
                 Tensor outputTensor = model.session().runner()
-                        .feed("serving_default_dense_input", inputTensor) // Ovo ime može varirati, provjeriti SavedModel signature
+                        .feed("input_layer", inputTensor) // Ovo ime može varirati, provjeriti SavedModel signature
                         .fetch("StatefulPartitionedCall")  // Standardno ime izlaza, može se promijeniti!
                         .run()
                         .get(0);
